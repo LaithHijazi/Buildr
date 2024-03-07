@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const WorkoutDetails = ({ workout }) => {
   return (
     <div className="workout-details">
