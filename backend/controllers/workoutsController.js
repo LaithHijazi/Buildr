@@ -23,6 +23,15 @@ const getWorkout = async (req, res) => {
 //Create a new workout
 const createWorkout = async (req, res) => {
   const { title, reps, sets, load } = req.body;
+  let emptyFields = [];
+  if (!title) emptyFields.push("title");
+  if (!reps) emptyFields.push("reps");
+  if (!sets) emptyFields.push("sets");
+  if (!load) emptyFields.push("load");
+
+  if (emptyFields.length > 0) {
+    return res.status(400).json({ error: `Missing fields: ${emptyFields}` });
+  }
   //add doc to db
   try {
     const workout = await Workout.create({ title, reps, sets, load });
