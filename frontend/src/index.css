@@ -101,3 +101,18 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+/* chatbot button */
+.external-link-button {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  text-decoration: none;
+}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ChatbotBtn from "./ChatbotBtn";
 
 const Navbar = () => {
   return (
@@ -8,6 +9,10 @@ const Navbar = () => {
           {" "}
           <h1>Buildr</h1>
         </Link>
+        <ChatbotBtn
+          url="https://buildr-56plmfsjduft3xxjqsbqzf.streamlit.app/"
+          buttonText="Chat with an AI trainer!"
+        />
       </div>
     </header>
   );
